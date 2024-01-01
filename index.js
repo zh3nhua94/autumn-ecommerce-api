@@ -25,6 +25,9 @@ app.use("/api/products", productRoute);
 app.use("/api/carts", cartRoute);
 app.use("/api/orders", orderRoute);
 app.use("/api/checkout", stripeRoute);
+app.get("/", (req, res) => {
+	res.json("Hello, World!");
+});
 
 app.listen(process.env.PORT || 8800, () => {
 	//where 8800 is our port number
